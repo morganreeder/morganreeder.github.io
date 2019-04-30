@@ -218,7 +218,7 @@ img::-moz-selection {
 header.masthead {
   text-align: left;
   color: #F0F1E5;
-  background-image: url("../img/test-header.jpg");
+  background-image: url("../img/header.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
