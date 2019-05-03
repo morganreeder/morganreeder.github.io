@@ -51,6 +51,10 @@ h6 {
   font-family: 'Gudea', sans-serif;
 }
 
+ul {
+    padding-inline-start: 15px;
+}
+
 section {
   padding: 100px 0;
 }
@@ -69,7 +73,7 @@ section h3.section-subheading {
   font-family: 'Ubuntu', sans-serif;
 }
 
-section h3.dark-muted {
+section h3.dark-muted, p.muted{
     color: #6C6D67;
 }
 
@@ -114,7 +118,7 @@ section.bg-offwhite {
   box-shadow: 0 0 0 0.2rem rgba(233,235,217, 0.5) !important;
 }
 
-::selection {
+::selection, mark {
   background: #D3E4D9;
   text-shadow: none;
 }
@@ -127,11 +131,15 @@ img::-moz-selection {
   background: transparent;
 }
 
-#mainNav {
+#mainNav, #projectNav {
   background-color: #454642;
 }
 
-#mainNav .navbar-toggler {
+#projectNav {
+    height: 54px;
+}
+
+#mainNav .navbar-toggler, #projectNav .navbar-toggler {
   font-size: 12px;
   right: 0;
   padding: 13px;
@@ -142,20 +150,20 @@ img::-moz-selection {
   outline: none;
 }
 
-#mainNav .navbar-toggler:hover {
+#mainNav .navbar-toggler:hover, #projectNav .navbar-toggler:hover {
     color:#E9EBD9;
 }
 
-#mainNav .navbar-name {
+#mainNav .navbar-name, #projectNav .navbar-name {
   color: #F0F1E5;
   font-family: 'Gudea', sans-serif;
 }
 
-#mainNav .navbar-name.active, #mainNav .navbar-name:active, #mainNav .navbar-name:focus, #mainNav .navbar-name:hover {
+#mainNav .navbar-name.active, #mainNav .navbar-name:active, #mainNav .navbar-name:focus, #mainNav .navbar-name:hover, #projectNav .navbar-name.active, #projectNav .navbar-name:active, #projectNav .navbar-name:focus, #projectNav .navbar-name:hover {
   color: #E9EBD9;
 }
 
-#mainNav .navbar-nav .nav-item .nav-link {
+#mainNav .navbar-nav .nav-item .nav-link, #projectNav .navbar-nav .nav-item .nav-link {
   font-size: 90%;
   font-weight: 400;
   padding: 0.75em 0;
@@ -164,7 +172,11 @@ img::-moz-selection {
   font-family: 'Gudea', sans-serif;
 }
 
-#mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
+#projectNav .navbar-nav .nav-item .nav-link {
+    padding: 1.1em 1em !important;
+  }
+
+#mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover, #projectNav .navbar-nav .nav-item .nav-link.active, #projectNav .navbar-nav .nav-item .nav-link:hover {
   color: #88B598;
 }
 
@@ -205,7 +217,7 @@ img::-moz-selection {
     background-color: #454642;
   }
   #mainNav.navbar-shrink .navbar-name {
-    font-size: 1.25em;
+    font-size: 1em;
     padding: 12px 0;
     color: #F0F1E5;
     font-weight: 400;
@@ -442,6 +454,8 @@ header.masthead .intro-text .intro-heading {
   transform: rotate(90deg);
   background-color: #212529;
 }
+
+#project object {width: 100%;}
 
 .timeline {
   position: relative;
