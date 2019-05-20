@@ -135,10 +135,6 @@ img::-moz-selection {
   background-color: #454642;
 }
 
-#projectNav {
-    height: 54px;
-}
-
 #mainNav .navbar-toggler, #projectNav .navbar-toggler {
   font-size: 12px;
   right: 0;
@@ -225,6 +221,7 @@ img::-moz-selection {
   #mainNav.navbar-shrink .nav-item .nav-link {
     color: #F0F1E5;
   }
+  #projectNav {height:54px}
 }
 
 header.masthead {
@@ -343,6 +340,8 @@ header.masthead .intro-text .intro-heading {
 
 #portfolio .portfolio-item h3 a {color: #282826}
 #portfolio .portfolio-item h3 a:hover {color: #88B598; text-decoration: none;}
+
+#portfolio .portfolio-item h3 small {font-size: 18px; font-style: italic;}
 /*
 #portfolio .portfolio-item .portfolio-caption {
   max-width: 400px;
