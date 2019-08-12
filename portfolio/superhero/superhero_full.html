@@ -1,93 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>Morgan Reeder</title>
-
-  <!-- Bootstrap core CSS -->
-  <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom fonts for this template -->
-  <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">  
-  <link href="https://fonts.googleapis.com/css?family=Gudea|Ubuntu:300,400" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.typekit.net/haw5fhw.css">
-
-  <!-- Custom styles for this template -->
-  <link href="../../css/agency.css" rel="stylesheet">
-
-</head>
-
-<body id="page-top">
-
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="projectNav">
-    <div class="container">
-      <a class="navbar-name js-scroll-trigger" href="../../index.html">Morgan Reeder</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav text-uppercase ml-auto">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="../../index.html#portfolio">Portfolio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="../../index.html#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Project view -->
- <section id="project">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-12">
-            <div class='tableauPlaceholder' id='viz1558307760696' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;XK&#47;XK6MSKGRP&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;XK6MSKGRP' /> <param name='toolbar' value='no' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;XK&#47;XK6MSKGRP&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1558307760696');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height='900px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    <head>
+        <meta charset="utf-8">
+        <title>Superhero Movies in D3</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Bangers|Open+Sans&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="wrapper">
+            <svg width="1200" height="3000">
+                <g class="header">
+                  <text class="title" x="30" y="55">The Age of Super (White) Men</text>
+                  <text class="subhead" x="30" y="85">Exploring diversity in DC and Marvel superhero films.</text>
+                  <text class="lead" x="30" y="115">In 1978, Superman set the mold for modern superhero films. The number</text><text class="lead" x="30" y="132">of films released every year has exploded in the last two decades, but one</text><text class="lead" x="30" y="149">thing has notchanged: Our heroes are still white men.</text>
+                </g>
+                <g class="main-chart">
+                    <g class="grid"></g>
+                    <g class="year-labels"></g>
+                    <g class="dots"></g>               
+                </g>
+                <g class="sec-chart">
+                    <g class="w_panel">
+                        <g class="box"></g>
+                        <g class="sec-header"></g>
+                        <g class="connector"></g>
+                        <g class="content">
+                            //lead in text
+                            <text y="320">With the success of the Superman</text><text y="335">trilogy, DC released Supergirl in 1984.</text><text y="350">The film was not a success; the next</text><text y="365">film starring a woman premiered</text><text y="380">20 years later.</text>
+                            
+                            <g class="star_dot">
+                            //intro to star dot chart
+                            <text y="405">Women have played the lead role</text><text y="420">in just four films.</text>
+                            </g>
+                            
+                            <g class="dir_dot">
+                            //intro to director dot chart
+                            <text y="530">Women have directed only two films.</text>
+                            </g>
+                            
+                            <g class="earnings">
+                            //intro to earnings bar chart
+                            <text y="645">Wonder Woman, the first film directed by</text><text y="660">and starring a woman, was the highest</text><text y="675">grossing superhero film of 2017.</text>
+                            </g>
+                            
+                            //closing text
+                            <text y="790">Wonder Woman is the third-highest</text><text y="805">grossing DC film.</text>
+                        </g>
+                    </g>
+                        
+                   <g class="poc_panel">
+                        <g class="box"></g>
+                        <g class="sec-header"></g>
+                        <g class="connector"></g>
+                        <g class="content">
+                            //lead in text
+                            <text y="320">In 1998, Blade introduced the first non-</text><text y="335">white hero. The Blade trilogy accounts</text><text y="350">for three of the seven films featuring a</text><text y="365">non-white lead.</text>
+                            
+                            <g class="star_dot">
+                            //intro to star dot chart
+                            <text y="405">Actors of color have played the lead role</text><text y="420">in seven films.</text>
+                            </g>
+                            
+                            <g class="dir_dot">
+                            //intro to director dot chart
+                            <text y="530">Five men of color have directed six films.</text>
+                            </g>
+                            
+                            <g class="earnings">
+                            //intro to earnings bar chart
+                            <text y="645">Black Panther, the first film directed by</text><text y="660">and starring a person of color, was the</text><text y="675">highest grossing film of 2018.</text>
+                            </g>
+                            
+                            //closing text
+                            <text y="790">Black Panther is the highest grossing</text><text y="805">Marvel film and superhero film ever.</text>
+                        </g>
+                    </g>
+                    
+                   <g class="future_panel">
+                        <g class="box"></g>
+                        <g class="sec-header"></g>
+                        <g class="connector"></g>
+                        <g class="content">
+                            //lead in text
+                            <text y="320">The movies set for release in 2019 and 2020 promise to</text><text y="335">be the most diverse in DC's and Marvel's histories.</text>
+                            
+                            <g class="star_dot_w">
+                            //intro to star dot chart
+                            <text y="365">Five films are headlined by a woman, surpassing the</text><text y="380">number of films in the prior four decades.</text>
+                            </g>
+                            
+                            <g class="dir_dot_w">
+                            //intro to director dot chart
+                            <text y="430">Women are set to direct three films, more than in the</text><text y="445">previous four decades.</text>
+                                
+                            <g class="star_dot_poc">
+                            //intro to star dot chart
+                            <text y="500">Two films have cast an actor of color</text><text y="515">as the lead.</text>
+                            </g>
+                            
+                            <g class="dir_dot_poc">
+                            //intro to director dot chart
+                            <text y="570">Only one film is set to be directed</text><text y="585">by a person of color. She will be</text><text y="600">the first woman of color to</text><text y="615">direct a superhero film.</text>
+                            </g>
+                            </g>
+                        </g>
+                    </g>
+                    
+                    <g class="annotations">
+                        <g class="headers"></g>
+                        
+                        <text y="450">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Halle Berry</text>
+                        <text y="465">is the only woman of</text>
+                        <text y="480">color to headline a</text>
+                        <text y="495">superhero film.</text>
+                        
+                        <text y="560">No woman of color</text>
+                        <text y="575">has directed a</text>
+                        <text y="590">superhero film. That</text>
+                        <text y="605">will change in 2020.</text>
+                                                
+                        <text y="675">Gray bars show the</text>
+                        <text y="690">average domestic gross</text>
+                        <text y="705">earnings of all other</text>
+                        <text y="720">superhero films in</text>
+                        <text y="735">that year.</text>
+   
+                    </g>
+                    <g class="outro">
+                        <text x="835" y="690">With the commercial successes of Wonder</text>
+                        <text x="845" y="707">Woman and Black Panther, will DC and</text>
+                        <text x="855" y="724">Marvel continue to invest in diverse</text>
+                        <text x="865" y="741">stories and storytellers?</text>
+                        <text x="865" y="800" class="tbc">To be continued...</text>
+                    </g>
+                    <g class="credits">
+                        <text x="295" y="809">Created by Morgan Reeder</text>
+                        <text x="295" y="822">Source: IMDB.com</text>
+                    </g>
+                </g>
+                    
+                <image xlink:href="img/superman.png" x="525" y="5" height="105px"/>
+                <image xlink:href="img/wonderwoman.png" x="215" y="220" height="200px"/>
+                <image xlink:href="img/blackpanther.png" x="710" y="635" height="190px"/>
+                <image xlink:href="img/captainmarvel.png" x="955" y="450" height="210px"/>
+            </svg>
         </div>
-      </div>
-     </div>
-    </section>
-
-    
-<!-- Contact -->
-  <section id="contact">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <h2 class="section-heading">Contact Me</h2>
-          <h3 class="section-subheading light-muted">Want to get in touch? Email me. I look forward to hearing from you.<br /><br />
-            <a href="mailto:morgan.reeder@gmail.com">morgan.reeder@gmail.com</a></h3>
-            
-        </div>
-      </div>
-      </div>
-  </section>
-
-
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="../../vendor/jquery/jquery.min.js"></script>
-  <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Plugin JavaScript -->
-  <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
-
-
-  <!-- Custom scripts for this template -->
-  <script src="../../js/agency.min.js"></script>
-
-</body>
-
+        
+        <script src="js/popup-v1.1.1.js"></script>
+        <script type="text/javascript" src="js/d3.js"></script>
+        <script type="text/jscript" src="js/index.js"></script>
+    </body>
 </html>

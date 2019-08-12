@@ -456,6 +456,7 @@ header.masthead .intro-text .intro-heading {
 
 #project object {width: 100%;}
 #project img.screenshot {padding-bottom: 20px;}
+#project h4 {padding-top: 40px;}
 
 .timeline {
   position: relative;
