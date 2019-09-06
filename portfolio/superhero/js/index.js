@@ -662,7 +662,8 @@ function updateSecChart(data) {
       .attr('cx',345)
       .attr('cy',443)
       .attr('r',8)
-      .style('fill','url(#WOC)');
+      .style('fill','url(#WOC)')
+      .attr('class','no-hover');
     d3.select('svg g.sec-chart .annotations')
       .selectAll('text')
       .attr('x',x_annotations)
